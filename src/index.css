@@ -2,6 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Editor - overwrite outline on EditorContent while focused */
 .ProseMirror-focused {
   outline: none;
 }
+
+/* Editor - overwrite heading styles */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+    margin-top: 2.5rem;
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+/* Editor - overwrite list styles */
+@layer base {
+  ul {
+    list-style-type: disc;
+    margin-left: 1.25rem; /* Add some left margin */
+  }
+
+  ol {
+    list-style-type: decimal;
+    margin-left: 1.25rem;
+  }
+
+  li {
+    margin-top: 0.25rem; /* Optional: space between list items */
+  }
+}
+
+/* Style for top-level bullet list */
+.ProseMirror ul {
+  list-style-type: disc; /* Default bullet style */
+  padding-left: 1.5rem;
+}
+
+/* Style for first nested level */
+.ProseMirror ul ul {
+  list-style-type: circle; /* Use circle bullets for first nested level */
+  padding-left: 1.5rem;
+}
+
+/* Style for second nested level */
+.ProseMirror ul ul ul {
+  list-style-type: square; /* Use square bullets for second nested level */
+  padding-left: 1.5rem;
+}
+
+/* Additional levels if needed */
+.ProseMirror ul ul ul ul {
+  list-style-type: lower-alpha; /* Alphabetic list for deeper levels */
+  padding-left: 1.5rem;
+}
+

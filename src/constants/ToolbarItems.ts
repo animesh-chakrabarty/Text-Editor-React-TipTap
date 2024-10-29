@@ -2,30 +2,35 @@ import { Editor } from "@tiptap/core";
 
 export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
   return [
+    // working
     {
       icon: "bold",
       title: "Bold",
       action: () => editor.chain().focus().toggleBold().run(),
       isActive: () => editor.isActive("bold"),
     },
+    // working
     {
       icon: "italic",
       title: "Italic",
       action: () => editor.chain().focus().toggleItalic().run(),
       isActive: () => editor.isActive("italic"),
     },
+    // working
     {
       icon: "strikethrough",
       title: "Strike",
       action: () => editor.chain().focus().toggleStrike().run(),
       isActive: () => editor.isActive("strike"),
     },
+    // working
     {
       icon: "code-view",
       title: "Code",
       action: () => editor.chain().focus().toggleCode().run(),
       isActive: () => editor.isActive("code"),
     },
+    // working
     {
       icon: "mark-pen-line",
       title: "Highlight",
@@ -33,33 +38,39 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
         editor.chain().focus().toggleHighlight({ color: "#ffc078" }).run(),
       isActive: () => editor.isActive("highlight"),
     },
+    // working
     {
       type: "divider",
     },
+    // working
     {
       icon: "h-1",
       title: "Heading 1",
       action: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
       isActive: () => editor.isActive("heading", { level: 1 }),
     },
+    // working
     {
       icon: "h-2",
       title: "Heading 2",
       action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
       isActive: () => editor.isActive("heading", { level: 2 }),
     },
+    // working
     {
       icon: "paragraph",
       title: "Paragraph",
       action: () => editor.chain().focus().setParagraph().run(),
       isActive: () => editor.isActive("paragraph"),
     },
+    // working
     {
       icon: "list-unordered",
       title: "Bullet List",
       action: () => editor.chain().focus().toggleBulletList().run(),
       isActive: () => editor.isActive("bulletList"),
     },
+    // working
     {
       icon: "list-ordered",
       title: "Ordered List",
@@ -79,9 +90,6 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       isActive: () => editor.isActive("codeBlock"),
     },
     {
-      type: "divider",
-    },
-    {
       icon: "double-quotes-l",
       title: "Blockquote",
       action: () => editor.chain().focus().toggleBlockquote().run(),
@@ -93,9 +101,6 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       action: () => editor.chain().focus().setHorizontalRule().run(),
     },
     {
-      type: "divider",
-    },
-    {
       icon: "text-wrap",
       title: "Hard Break",
       action: () => editor.chain().focus().setHardBreak().run(),
@@ -104,9 +109,6 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       icon: "format-clear",
       title: "Clear Format",
       action: () => editor.chain().focus().clearNodes().unsetAllMarks().run(),
-    },
-    {
-      type: "divider",
     },
     {
       icon: "arrow-go-back-line",
