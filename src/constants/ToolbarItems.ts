@@ -25,7 +25,7 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
     },
     // working
     {
-      icon: "code-view",
+      icon: "inline-code",
       title: "Code",
       action: () => editor.chain().focus().toggleCode().run(),
       isActive: () => editor.isActive("code"),
@@ -77,46 +77,54 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       action: () => editor.chain().focus().toggleOrderedList().run(),
       isActive: () => editor.isActive("orderedList"),
     },
+    // working
     {
       icon: "Task-List",
       title: "Task List",
       action: () => editor.chain().focus().toggleTaskList().run(),
       isActive: () => editor.isActive("taskList"),
     },
+    // working
     {
-      icon: "code-box-line",
+      icon: "code-block",
       title: "Code Block",
       action: () => editor.chain().focus().toggleCodeBlock().run(),
       isActive: () => editor.isActive("codeBlock"),
     },
+    // working
     {
-      icon: "double-quotes-l",
+      icon: "blockquote",
       title: "Blockquote",
       action: () => editor.chain().focus().toggleBlockquote().run(),
       isActive: () => editor.isActive("blockquote"),
     },
+    // working - divider
     {
       icon: "separator",
       title: "Horizontal Rule",
       action: () => editor.chain().focus().setHorizontalRule().run(),
     },
+    // working - hard break
     {
-      icon: "text-wrap",
+      icon: "add-break",
       title: "Hard Break",
       action: () => editor.chain().focus().setHardBreak().run(),
     },
+    // working - clear formatting
     {
-      icon: "format-clear",
+      icon: "clear-formatting",
       title: "Clear Format",
       action: () => editor.chain().focus().clearNodes().unsetAllMarks().run(),
     },
+    // working
     {
-      icon: "arrow-go-back-line",
+      icon: "undo",
       title: "Undo",
       action: () => editor.chain().focus().undo().run(),
     },
+    // working
     {
-      icon: "arrow-go-forward-line",
+      icon: "redo",
       title: "Redo",
       action: () => editor.chain().focus().redo().run(),
     },
