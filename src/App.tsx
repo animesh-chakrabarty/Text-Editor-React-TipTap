@@ -1,11 +1,14 @@
-import Editor from "./components/Editor/Editor";
+import { Route, Routes } from "react-router-dom";
+import Editor from "./pages/Editor";
+import Home from "./pages/Home";
 
-function App() {
+const App = () => {
   return (
-    <div className="h-full">
-      <Editor />
-    </div>
+    <Routes>
+      <Route path={"/"} element={<Home />} />
+      <Route path="/editor" element={<Editor />} />
+    </Routes>
   );
-}
+};
 
 export default App;

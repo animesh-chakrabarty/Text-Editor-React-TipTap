@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import Highlight from "@tiptap/extension-highlight";
 import StarterKit from "@tiptap/starter-kit";
-import Toolbar from "./Toolbar";
+import Toolbar from "@/components/Editor/Toolbar";
 import TaskList from "@tiptap/extension-task-list";
 import TaskItem from "@tiptap/extension-task-item";
 import Placeholder from "@tiptap/extension-placeholder";
