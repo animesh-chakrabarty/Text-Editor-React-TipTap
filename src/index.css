@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Editor - placeholder styling */
+p.is-editor-empty:first-child::before {
+  color: #cac6c3;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
 /* Editor - overwrite outline on EditorContent while focused */
 .ProseMirror-focused {
   outline: none;
@@ -42,6 +51,9 @@
   h5,
   h6 {
     font-size: 1rem;
+  }
+  :root {
+    --radius: 0.5rem;
   }
 }
 
@@ -150,7 +162,7 @@ ul[data-type="taskList"] {
 /* Editor - blockquote styles */
 @layer base {
   blockquote {
-    border-left: 3px solid #E7E4E2;
+    border-left: 3px solid #e7e4e2;
     margin: 1.5rem 0;
     padding-left: 1rem;
   }

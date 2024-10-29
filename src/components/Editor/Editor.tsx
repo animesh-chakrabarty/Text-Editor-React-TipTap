@@ -5,6 +5,7 @@ import StarterKit from "@tiptap/starter-kit";
 import Toolbar from "./Toolbar";
 import TaskList from "@tiptap/extension-task-list";
 import TaskItem from "@tiptap/extension-task-item";
+import Placeholder from "@tiptap/extension-placeholder";
 
 const Editor: React.FC = () => {
   const [content, setContent] = useState<string | null>(null);
@@ -17,8 +18,11 @@ const Editor: React.FC = () => {
       TaskItem.configure({
         nested: true,
       }),
+      Placeholder.configure({
+        placeholder: "Write your blogpost here...",
+      }),
     ],
-    content: "<p>Write your blogpost here...</p>",
+    content: "",
     onUpdate: ({ editor }) => {
       setContent(editor.getHTML());
     },
@@ -27,7 +31,7 @@ const Editor: React.FC = () => {
   console.log(content);
 
   return (
-    <div className="max-w-2xl mx-auto mt-10 p-4 border border-gray-300 rounded-lg shadow-md">
+    <div className="max-w-5xl mx-auto mt-10 p-4 border border-gray-300 rounded-lg shadow-md">
       {editor && <Toolbar editor={editor} />}
       <EditorContent
         editor={editor}

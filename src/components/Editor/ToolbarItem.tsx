@@ -1,24 +1,27 @@
+import { Button } from "../ui/button";
+
 const ToolbarItem = ({
-  icon,
+  icon: Icon,
   title,
   action,
   isActive = null,
 }: {
-  icon?: string;
+  icon?: JSX.ElementType;
   title?: string;
   action?: () => void;
   isActive?: (() => boolean) | null;
 }) => {
   return (
-    <button
-      className={`cursor-pointer ${
-        isActive && isActive() ? "bg-slate-600" : ""
+    <Button
+      variant={"outline"}
+      className={`cursor-pointer mb-2 px-3 py-1 ${
+        isActive && isActive() ? "bg-gray-300" : ""
       }`}
       onClick={action}
       title={title}
     >
-      {icon}
-    </button>
+      {Icon && <Icon />}
+    </Button>
   );
 };
 
