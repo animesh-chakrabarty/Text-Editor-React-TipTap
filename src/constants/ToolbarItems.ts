@@ -40,6 +40,9 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       action: () => editor.chain().focus().toggleStrike().run(),
       isActive: () => editor.isActive("strike"),
     },
+    {
+      type: "divider",
+    },
     // working
     {
       icon: FaCode,
@@ -54,6 +57,9 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       action: () => editor.chain().focus().toggleCodeBlock().run(),
       isActive: () => editor.isActive("codeBlock"),
     },
+    {
+      type: "divider",
+    },
     // working
     {
       icon: FaHighlighter,
@@ -62,7 +68,6 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
         editor.chain().focus().toggleHighlight({ color: "#ffc078" }).run(),
       isActive: () => editor.isActive("highlight"),
     },
-    // working
     {
       type: "divider",
     },
@@ -87,6 +92,9 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       action: () => editor.chain().focus().setParagraph().run(),
       isActive: () => editor.isActive("paragraph"),
     },
+    {
+      type: "divider",
+    },
     // working
     {
       icon: FaList,
@@ -108,6 +116,9 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       action: () => editor.chain().focus().toggleTaskList().run(),
       isActive: () => editor.isActive("taskList"),
     },
+    {
+      type: "divider",
+    },
     // working
     {
       icon: FaQuoteRight,
@@ -126,6 +137,9 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       icon: TbClearFormatting,
       title: "Clear Format",
       action: () => editor.chain().focus().clearNodes().unsetAllMarks().run(),
+    },
+    {
+      type: "divider",
     },
     // working
     {

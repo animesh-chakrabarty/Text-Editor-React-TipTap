@@ -31,13 +31,15 @@ const Editor: React.FC = () => {
   console.log(content);
 
   return (
-    <div className="max-w-5xl mx-auto mt-10 p-4 border border-gray-300 rounded-lg shadow-md">
-      {editor && <Toolbar editor={editor} />}
-      <EditorContent
-        editor={editor}
-        className="custom min-h-[300px] p-4 border border-gray-200 rounded bg-white"
-      />
-    </div>
+    <main className="h-full bg-[#F5F4F4] pt-10">
+      <div className="max-w-5xl max-h-[95%] mx-auto p-4 border border-gray-300 rounded-lg shadow-md">
+        {editor && <Toolbar editor={editor} />}
+        <EditorContent
+          editor={editor}
+          className="editor-content min-h-[300px] max-h-[75vh] overflow-y-auto p-4 border border-gray-200 rounded bg-white"
+        />
+      </div>
+    </main>
   );
 };
 
