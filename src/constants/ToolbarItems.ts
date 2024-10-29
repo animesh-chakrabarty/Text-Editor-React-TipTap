@@ -78,7 +78,7 @@ export const emitToolbarItems = ({ editor }: { editor: Editor }) => {
       isActive: () => editor.isActive("orderedList"),
     },
     {
-      icon: "list-check-2",
+      icon: "Task-List",
       title: "Task List",
       action: () => editor.chain().focus().toggleTaskList().run(),
       isActive: () => editor.isActive("taskList"),
